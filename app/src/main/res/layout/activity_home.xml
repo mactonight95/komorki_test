@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home">
+
+    <TextView
+        android:id="@+id/helloView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="List of all articles"
+        android:textSize="15dp"
+        tools:layout_editor_absoluteX="135dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/articlesList"
+        android:layout_width="364dp"
+        android:layout_height="31dp"
+        android:textSize="10dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:scrollbars="vertical"
+        tools:layout_editor_absoluteX="12dp"
+        tools:layout_editor_absoluteY="92dp" />
+
+    <Button
+        android:id="@+id/articlesGetButton"
+        android:layout_width="121dp"
+        android:layout_height="40dp"
+        android:text="Get articles"
+        android:onClick="getArticlesClicked"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="45dp" />
+
+    <Button
+        android:id="@+id/articleAddButton"
+        android:layout_width="121dp"
+        android:layout_height="40dp"
+        android:text="Add article"
+        tools:layout_editor_absoluteX="249dp"
+        tools:layout_editor_absoluteY="45dp" />
+
+
+</android.support.constraint.ConstraintLayout>
