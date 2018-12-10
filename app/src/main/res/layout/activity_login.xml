@@ -4,59 +4,104 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    android:orientation="vertical"
+    tools:context=".Login">
 
 
     <TextView
         android:id="@+id/helloView"
-        android:layout_width="364dp"
-        android:layout_height="84dp"
+        android:layout_width="366dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginBottom="16dp"
         android:gravity="center"
         android:text="Please entrer your username and password in order to login"
-        android:textSize="23dp"
-        tools:layout_editor_absoluteX="10dp"
-        tools:layout_editor_absoluteY="16dp" />
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/usernameBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/usernameBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="96dp"
+        android:layout_marginLeft="96dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="96dp"
+        android:layout_marginRight="96dp"
+        android:layout_marginBottom="20dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Username"
         android:gravity="center"
-        tools:layout_editor_absoluteX="84dp"
-        tools:layout_editor_absoluteY="117dp" />
+        android:inputType="textPersonName"
+        android:hint="Username"
+        app:layout_constraintBottom_toTopOf="@+id/passwordBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/helloView"
+        app:layout_constraintVertical_bias="1.0" />
 
     <EditText
         android:id="@+id/passwordBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="96dp"
+        android:layout_marginLeft="96dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="96dp"
+        android:layout_marginRight="96dp"
+        android:layout_marginBottom="20dp"
         android:ems="10"
         android:inputType="textPassword"
-        tools:layout_editor_absoluteX="83dp"
-        tools:layout_editor_absoluteY="181dp" />
+        app:layout_constraintBottom_toTopOf="@+id/loginButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/usernameBox" />
 
 
     <Button
         android:id="@+id/loginButton"
-        android:layout_width="132dp"
-        android:layout_height="47dp"
+        android:layout_width="150dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginLeft="128dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="128dp"
+        android:layout_marginRight="128dp"
+        android:layout_marginBottom="8dp"
         android:text="Login"
-        tools:layout_editor_absoluteX="126dp"
-        tools:layout_editor_absoluteY="232dp" />
+        app:layout_constraintBottom_toTopOf="@+id/registerLink"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordBox" />
 
     <TextView
         android:id="@+id/registerLink"
-        android:layout_width="165dp"
+        android:layout_width="149dp"
         android:layout_height="29dp"
-        android:layout_marginEnd="108dp"
-        android:layout_marginRight="108dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginLeft="128dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="128dp"
+        android:layout_marginRight="128dp"
+        android:layout_marginBottom="349dp"
         android:gravity="center"
         android:text="Click here to register"
         android:textColor="#0D47A1"
         android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="279dp" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginButton" />
 
 </android.support.constraint.ConstraintLayout>

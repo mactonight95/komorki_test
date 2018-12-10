@@ -16,6 +16,8 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import android.util.Log;
+
+import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
@@ -31,7 +33,7 @@ public class Home extends AppCompatActivity {
     //Lista elementow UI
     TextView articlesList;
     Button articlesGetButton, articleAddButton;
-    String URL = " https://powerful-tor-45975.herokuapp.com/article";
+    //String URL = " https://powerful-tor-45975.herokuapp.com/article";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,10 +65,10 @@ public class Home extends AppCompatActivity {
 
     private void getArticlesList() {
         //Pobranie listy tytulow artykulow
-
+        String URL = "https://powerful-tor-45975.herokuapp.com/article/all";
         //JSON request ktory nie dziala???
 
-        JsonArrayRequest arrayReq = new JsonArrayRequest(Request.Method.GET, URL + "/all", null,
+        JsonArrayRequest arrayReq = new JsonArrayRequest(Request.Method.GET, URL, null,
                 new Response.Listener<JSONArray>() {
                     @Override
                     public void onResponse(JSONArray response) {
@@ -97,8 +99,7 @@ public class Home extends AppCompatActivity {
                         setArticlesListText("Error while calling REST API");
                         Log.e("Volley", error.toString());
                     }
-                }
-        );
+                });
         //Dodanie do kolejki requestow
         RequestQueue rQueue = Volley.newRequestQueue(Home.this);
         rQueue.add(arrayReq);
